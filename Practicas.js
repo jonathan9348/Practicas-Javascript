@@ -1,3 +1,47 @@
+//1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.//
+
+function miFuncion(str){
+  let contador = 0;
+  for( let i = 0; i < str.length; i++){
+    if(str[i]) contador++;
+  }
+  return contador;
+}
+
+
+
+//2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".//
+
+function recorte(str, num){
+  
+  return str.slice(0, num);
+}
+
+
+
+//3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].//
+
+function arrayStr(str){
+  let separador = " ";
+return str.split(separador)
+}
+
+
+
+//4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.//
+
+function repeat(str, num){
+  
+  let rep = "";
+  
+  while(num > 0){
+    rep = rep + " " + str;
+    num--;
+    }
+  return rep;
+}
+
+
 /*En esta Kata, se te darán dos enteros positivos a y b y tu tarea será aplicar las siguientes operaciones:
 
 i) Si a = 0 o b = 0, devuelve [a,b]. En caso contrario, pasa al paso ii);
@@ -79,8 +123,7 @@ function fibo(n){
  /* Implementa Length() para contar el número de nodos de una lista enlazada.
 
 length(null) => 0
-length(1 -> 2 -> 3 -> null) => 3
-Implementa Count() para contar las ocurrencias de un entero en una lista enlazada.*/
+length(1 -> 2 -> 3 -> null) => 3*/
 
 LinkedList.prototype.length = function(){
   
